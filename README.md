@@ -11,9 +11,13 @@ Demonstrate different message queue configurations containing 1 queue manager an
 
 ## Configuration 1
 * Setup:
+
 File related: QM.mqsc
+
 One Queue manager: QM
+
 One local queue: LQ.QM
+
 Listener: MQ1414 (Port:1414)
 
 * How to use/run:
@@ -28,15 +32,18 @@ amqsget <Local_Queue_Name> <Queue_Manager_Name>
 
 Client Binding:
 Change environment variable: 
-```ssh
+```script
 $ export MQSERVER="QMSVRCONN/TCP/localhost(1414)"
-amqsputc <Local_Queue_Name> <Queue_Manager_Name>
-amqsgetc <Local_Queue_Name> <Queue_Manager_Name>
+```
+Put message
+```script
+$ amqsputc <Local_Queue_Name> <Queue_Manager_Name>
+```
+Get message
+```script
+$ amqsgetc <Local_Queue_Name> <Queue_Manager_Name>
 ```
 
-
-amqsputc <Local_Queue_Name> <Queue_Manager_Name>
-amqsgetc <Local_Queue_Name> <Queue_Manager_Name>
 ### Client Binding Diagram
 
 ## Configuration 2
