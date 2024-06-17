@@ -39,6 +39,14 @@ Start the listener
 ``` script
 $ runmqsc QM
 START LISTENER(MQ1414)
+END
+```
+
+Refresh security
+``` script
+$ runmqsc QM
+REFRESH SECURITY
+END
 ```
 
 ### Local Binding:
