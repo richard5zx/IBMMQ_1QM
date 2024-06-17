@@ -5,18 +5,18 @@ Demonstrate different message queue configurations containing 1 queue manager an
 ## Environment
 * VM: Virtual Machine Manager
 * Operating System: REHL 8.9
-Message queue version: IBM MQ 9.3.4.0
-  IBMQ Installtion path: /opt/mqm
-  Data path: /var/mqm
+* Message queue version: IBM MQ 9.3.4.0
+  ** IBMQ Installtion path: /opt/mqm
+  ** Data path: /var/mqm
 
 ## Configuration 1
-Setup:
+* Setup:
 File related: QM.mqsc
 One Queue manager: QM
 One local queue: LQ.QM
 Listener: MQ1414 (Port:1414)
 
-Usage:
+* How to use/run:
 Create a queue manager called 'QM'
 Run the queue manager 'QM'
 Import the QM.mqsc file in the queue manger 'QM':runmqsc QM < /PATH/LOCATION/OF/QM.mqsc
