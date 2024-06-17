@@ -6,6 +6,7 @@ Demonstrate different message queue configurations containing **one** queue mana
 * VM: Virtual Machine Manager
 * Operating System: REHL 8.9
 * Message queue version: IBM MQ 9.3.4.0
+* mqm user is system administrator
 * IBMQ Installtion path: /opt/mqm
 * Data path: /var/mqm
 
@@ -18,7 +19,7 @@ Demonstrate different message queue configurations containing **one** queue mana
 * Listener: MQ1414 (Port:1414)
 
 ### How to use/run:
-Create a queue manager called 'QM'
+Under mqm(System Admin) user Create a queue manager called 'QM'
 ```script
 $ crtmqm -lc -lp 10 -ls 5 -lf 8196 -u SYSTEM.DEAD.LETTER.QUEUE QM
 ```
@@ -34,7 +35,14 @@ Import the QM.mqsc file in the queue manger 'QM'
 $ runmqsc QM < /PATH/LOCATION/OF/QM.mqsc
 ```
 
+Start the listener
+``` script
+$ runmqsc QM
+START LISTENER(MQ1414)
+```
+
 ### Local Binding:
+Change to a user that is not mqm
 Put message
 ```script
 $ amqsput <Local_Queue_Name> <Queue_Manager_Name>
@@ -50,6 +58,7 @@ $ amqsget LQ.QM QM
 ### Local Binding Diagram
 
 ### Client Binding:
+Change to a user that is not mqm
 Change environment variable: 
 ```script
 $ export MQSERVER="QMSVRCONN/TCP/localhost(1414)"
