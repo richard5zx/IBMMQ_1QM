@@ -1,6 +1,6 @@
 # Message Queue Projects/Configurations
 ## Goal
-Demonstrate different message queue configurations containing 1 queue manager and its functions
+Demonstrate different message queue configurations containing **one** queue manager and its functions
 
 ## Environment
 * VM: Virtual Machine Manager
@@ -10,28 +10,27 @@ Demonstrate different message queue configurations containing 1 queue manager an
 * Data path: /var/mqm
 
 ## Configuration 1
-* Setup:
+### Setup:
 
-File related: QM.mqsc
+* File related: QM.mqsc
+* One Queue manager: QM
+* One local queue: LQ.QM
+* Listener: MQ1414 (Port:1414)
 
-One Queue manager: QM
+### How to use/run:
+* Create a queue manager called 'QM'
+* Run the queue manager 'QM'
+* Import the QM.mqsc file in the queue manger 'QM'
 
-One local queue: LQ.QM
-
-Listener: MQ1414 (Port:1414)
-
-* How to use/run:
-Create a queue manager called 'QM'
-
-Run the queue manager 'QM'
-
-Import the QM.mqsc file in the queue manger 'QM':runmqsc QM < /PATH/LOCATION/OF/QM.mqsc
-
-Local Binding:
+``` script
+runmqsc QM < /PATH/LOCATION/OF/QM.mqsc
+```
+### Local Binding:
 Put message
 ```script
 amqsput <Local_Queue_Name> <Queue_Manager_Name>
 ```
+
 Get message
 ```script
 amqsget <Local_Queue_Name> <Queue_Manager_Name>
@@ -39,7 +38,7 @@ amqsget <Local_Queue_Name> <Queue_Manager_Name>
 
 ### Local Binding Diagram
 
-Client Binding:
+### Client Binding:
 Change environment variable: 
 ```script
 $ export MQSERVER="QMSVRCONN/TCP/localhost(1414)"
