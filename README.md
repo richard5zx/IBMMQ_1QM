@@ -6,8 +6,8 @@ Demonstrate different message queue configurations containing 1 queue manager an
 * VM: Virtual Machine Manager
 * Operating System: REHL 8.9
 * Message queue version: IBM MQ 9.3.4.0
-  ** IBMQ Installtion path: /opt/mqm
-  ** Data path: /var/mqm
+* IBMQ Installtion path: /opt/mqm
+* Data path: /var/mqm
 
 ## Configuration 1
 * Setup:
@@ -22,12 +22,21 @@ Listener: MQ1414 (Port:1414)
 
 * How to use/run:
 Create a queue manager called 'QM'
+
 Run the queue manager 'QM'
+
 Import the QM.mqsc file in the queue manger 'QM':runmqsc QM < /PATH/LOCATION/OF/QM.mqsc
 
 Local Binding:
+Put message
+```script
 amqsput <Local_Queue_Name> <Queue_Manager_Name>
+```
+Get message
+```script
 amqsget <Local_Queue_Name> <Queue_Manager_Name>
+```
+
 ### Local Binding Diagram
 
 Client Binding:
