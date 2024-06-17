@@ -3,13 +3,13 @@
 Demonstrate different message queue configurations containing 1 queue manager and its functions
 
 ## Environment
-VM: Virtual Machine Manager
-Operating System: REHL 8.9
+* VM: Virtual Machine Manager
+* Operating System: REHL 8.9
 Message queue version: IBM MQ 9.3.4.0
   IBMQ Installtion path: /opt/mqm
   Data path: /var/mqm
 
-### Configuration 1
+## Configuration 1
 Setup:
 File related: QM.mqsc
 One Queue manager: QM
@@ -30,8 +30,8 @@ Change environment variable: $ export MQSERVER="QMSVRCONN/TCP/localhost(1414)"
 amqsputc <Local_Queue_Name> <Queue_Manager_Name>
 amqsgetc <Local_Queue_Name> <Queue_Manager_Name>
 
-# Configuration 2
+## Configuration 2
 
-# Configuration 3
+## Configuration 3
 
-# Configuration 4
+## Configuration 4
