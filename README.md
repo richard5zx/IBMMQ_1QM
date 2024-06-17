@@ -24,11 +24,20 @@ Import the QM.mqsc file in the queue manger 'QM':runmqsc QM < /PATH/LOCATION/OF/
 Local Binding:
 amqsput <Local_Queue_Name> <Queue_Manager_Name>
 amqsget <Local_Queue_Name> <Queue_Manager_Name>
+### Local Binding Diagram
 
 Client Binding:
-Change environment variable: $ export MQSERVER="QMSVRCONN/TCP/localhost(1414)"
+Change environment variable: 
+```ssh
+$ export MQSERVER="QMSVRCONN/TCP/localhost(1414)"
 amqsputc <Local_Queue_Name> <Queue_Manager_Name>
 amqsgetc <Local_Queue_Name> <Queue_Manager_Name>
+```
+
+
+amqsputc <Local_Queue_Name> <Queue_Manager_Name>
+amqsgetc <Local_Queue_Name> <Queue_Manager_Name>
+### Client Binding Diagram
 
 ## Configuration 2
 
