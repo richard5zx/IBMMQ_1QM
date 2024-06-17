@@ -1,14 +1,15 @@
 # Message Queue Projects/Configurations
-Demonstrate different message queue configurations and its functions
+## Goal
+Demonstrate different message queue configurations containing 1 queue manager and its functions
 
-# Environment
+## Environment
 VM: Virtual Machine Manager
 Operating System: REHL 8.9
 Message queue version: IBM MQ 9.3.4.0
   IBMQ Installtion path: /opt/mqm
   Data path: /var/mqm
 
-# Configuration 1
+### Configuration 1
 Setup:
 File related: QM.mqsc
 One Queue manager: QM
