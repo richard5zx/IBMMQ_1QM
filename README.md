@@ -23,9 +23,9 @@ Create a queue manager called 'QM'
 $ crtmqm -lc -lp 10 -ls 5 -lf 8196 -u SYSTEM.DEAD.LETTER.QUEUE QM
 ```
 
-Run the queue manager 'QM'
+Start the queue manager 'QM'
 ```script
-$ runmqsc QM
+$ strmqm QM
 ```
 
 Import the QM.mqsc file in the queue manger 'QM'
